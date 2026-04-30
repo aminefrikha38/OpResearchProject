@@ -1,0 +1,119 @@
+Problem loaded: problem7.txt
+n = 4, m = 2
+
+COST MATRIX
+      C         1C         2    Supply
+P1            50        20       100
+P2            10        50       200
+P3            50        40       100
+P4            45        35       200
+Demand       300       300
+
+===== NORTH-WEST METHOD =====
+Allocate 100 to (P1, C1)
+Allocate 200 to (P2, C1)
+Allocate 100 to (P3, C2)
+Allocate 200 to (P4, C2)
+
+INITIAL PROPOSAL - NORTH-WEST
+      C         1C         2    Supply
+P1           100         .       100
+P2           200         .       200
+P3             .       100       100
+P4             .       200       200
+Demand       300       300
+
+Initial total cost = 18000
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1           100         .       100
+P2           200         .       200
+P3             .       100       100
+P4             .       200       200
+Demand       300       300
+Current total cost = 18000
+
+Number of basic edges = 4
+Expected for a tree = 5
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P1, C2)
+Graph is connected.
+
+Potentials:
+u = [0, -40, 20, 15]
+v = [50, 20]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1            50        20
+P2            10       -20
+P3            70        40
+P4            65        35
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1             0         0
+P2             0        70
+P3           -20         0
+P4           -20         0
+
+Best improving edge: (P3, C1) with marginal cost -20
+Cycle: (P3,C1) -> (P1,C1) -> (P1,C2) -> (P3,C2)
+Plus cells: ['(P3,C1)', '(P1,C2)']
+Minus cells: ['(P1,C1)', '(P3,C2)']
+theta = 100
+Deleted edge(s): ['(P1,C1)', '(P3,C2)']
+
+========== ITERATION 2 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .100.000001       100
+P2           200         .       200
+P3           100         .       100
+P4             .       200       200
+Demand       300       300
+Current total cost = 16000.00002
+
+Number of basic edges = 4
+Expected for a tree = 5
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P3, C2)
+Graph is connected.
+
+Potentials:
+u = [0, -20, 20, 15]
+v = [30, 20]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1            30        20
+P2            10         0
+P3            50        40
+P4            45        35
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1            20         0
+P2             0        50
+P3             0         0
+P4             0         0
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .100.000001       100
+P2           200         .       200
+P3           100     1e-06       100
+P4             .       200       200
+Demand       300       300
+Final minimal cost = 16000.00006
