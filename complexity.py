@@ -158,12 +158,11 @@ def worst_case_plot(results, column_index, title, filename):
 def main():
     Path("plots").mkdir(exist_ok=True)
 
-    # Start small. Later you can try [10, 40, 100, 400]
-    sizes = [10, 40]
 
-    # For the final project, the PDF says 100.
-    # For testing, use 3 or 5 first.
-    repetitions = 5
+    sizes = [10, 40, 10**2, 4*10**2, 10**3, 4*10**3, 10**4]
+
+
+    repetitions = 100
 
     results = []
 
