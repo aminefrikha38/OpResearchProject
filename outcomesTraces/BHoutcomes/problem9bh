@@ -1,0 +1,178 @@
+Problem loaded: problem9.txt
+n = 7, m = 3
+
+COST MATRIX
+      C         1C         2C         3    Supply
+P1            30        20        15       100
+P2            10        50         2       100
+P3             9        10        30       100
+P4             6         2        29       100
+P5            50        40         3       100
+P6             5        38        27       100
+P7            50         4        22       100
+Demand       400       200       100
+
+===== BALAS-HAMMER METHOD =====
+
+Maximum penalty = 37
+Row with max penalty: P5
+Chosen cell: (P5, C3) with cost 3
+Allocate 100
+
+Maximum penalty = 46
+Row with max penalty: P7
+Chosen cell: (P7, C2) with cost 4
+Allocate 100
+
+Maximum penalty = 40
+Row with max penalty: P2
+Chosen cell: (P2, C1) with cost 10
+Allocate 100
+
+Maximum penalty = 33
+Row with max penalty: P6
+Chosen cell: (P6, C1) with cost 5
+Allocate 100
+
+Maximum penalty = 10
+Row with max penalty: P1
+Chosen cell: (P1, C2) with cost 20
+Allocate 100
+
+Maximum penalty = 9
+Row with max penalty: P3
+Chosen cell: (P3, C1) with cost 9
+Allocate 100
+
+Maximum penalty = 6
+Row with max penalty: P4
+Column with max penalty: C1
+Chosen cell: (P4, C1) with cost 6
+Allocate 100
+
+INITIAL PROPOSAL - BALAS-HAMMER
+      C         1C         2C         3    Supply
+P1             .       100         .       100
+P2           100         .         .       100
+P3           100         .         .       100
+P4           100         .         .       100
+P5             .         .       100       100
+P6           100         .         .       100
+P7             .       100         .       100
+Demand       400       200       100
+
+Initial total cost = 5700
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2C         3    Supply
+P1             .       100         .       100
+P2           100         .         .       100
+P3           100         .         .       100
+P4           100         .         .       100
+P5             .         .       100       100
+P6           100         .         .       100
+P7             .       100         .       100
+Demand       400       200       100
+Current total cost = 5700
+
+Number of basic edges = 7
+Expected for a tree = 9
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P2, C3)
+Added epsilon edge to make tree: (P4, C2)
+Graph is connected.
+
+Potentials:
+u = [0, -14, -15, -18, -13, -19, -16]
+v = [24, 20, 16]
+
+POTENTIAL COSTS TABLE
+      C         1C         2C         3
+P1            24        20        16
+P2            10         6         2
+P3             9         5         1
+P4             6         2        -2
+P5            11         7         3
+P6             5         1        -3
+P7             8         4         0
+
+MARGINAL COSTS TABLE
+      C         1C         2C         3
+P1             6         0        -1
+P2             0        44         0
+P3             0         5        29
+P4             0         0        31
+P5            39        33         0
+P6             0        37        30
+P7            42         0        22
+
+Best improving edge: (P1, C3) with marginal cost -1
+Cycle: (P1,C3) -> (P2,C3) -> (P2,C1) -> (P4,C1) -> (P4,C2) -> (P1,C2)
+Plus cells: ['(P1,C3)', '(P2,C1)', '(P4,C2)']
+Minus cells: ['(P2,C3)', '(P4,C1)', '(P1,C2)']
+theta = 1e-06
+Deleted edge(s): ['(P2,C3)']
+
+========== ITERATION 2 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2C         3    Supply
+P1             . 99.999999     1e-06       100
+P2    100.000001         .         .       100
+P3           100         .         .       100
+P4     99.999999     2e-06         .       100
+P5             .         .       100       100
+P6           100         .         .       100
+P7             .       100         .       100
+Demand       400       200       100
+Current total cost = 5700.000003
+
+Number of basic edges = 9
+Expected for a tree = 9
+Proposition is non-degenerate.
+Graph is connected.
+
+Potentials:
+u = [0, -14, -15, -18, -12, -19, -16]
+v = [24, 20, 15]
+
+POTENTIAL COSTS TABLE
+      C         1C         2C         3
+P1            24        20        15
+P2            10         6         1
+P3             9         5         0
+P4             6         2        -3
+P5            12         8         3
+P6             5         1        -4
+P7             8         4        -1
+
+MARGINAL COSTS TABLE
+      C         1C         2C         3
+P1             6         0         0
+P2             0        44         1
+P3             0         5        30
+P4             0         0        32
+P5            38        32         0
+P6             0        37        31
+P7            42         0        23
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2C         3    Supply
+P1             . 99.999999     1e-06       100
+P2    100.000001         .         .       100
+P3           100         .         .       100
+P4     99.999999     2e-06         .       100
+P5             .         .       100       100
+P6           100         .         .       100
+P7             .       100         .       100
+Demand       400       200       100
+Final minimal cost = 5700.000003

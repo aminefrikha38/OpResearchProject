@@ -1,0 +1,478 @@
+Problem loaded: problem11.txt
+n = 20, m = 10
+
+COST MATRIX
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10    Supply
+P1             1         2         3         4         5         6         7         8         9        10        10
+P2            11        12        13        14        15        16        17        18        19        20        20
+P3            21        22        23        24        25        26        27        28        29        30        30
+P4            31        32        33        34        35        36        37        38        39        40        40
+P5            41        41        43        44        45        46        47        48        49        50        50
+P6            51        52        53        54        55        56        57        58        59        60        60
+P7            61        62        63        64        65        66        67        68        69        70        70
+P8            71        72        73        74        75        76        77        78        79        80        80
+P9            81        82        83        84        85        86        87        88        89        90        90
+P10           91        92        93        94        95        96        97        98        99       100       100
+P11          101       102       103       104       105       106       107       108       109       110       110
+P12          111       112       113       114       115       116       117       118       119       120       120
+P13          121       122       123       124       125       126       127       128       129       130       130
+P14          131       132       133       134       135       136       137       138       139       140       140
+P15          141       142       143       144       145       146       147       148       149       150       150
+P16          151       152       153       154       155       156       157       158       159       160       160
+P17          161       162       163       164       165       166       167       168       169       170       170
+P18          171       172       173       174       175       176       177       178       179       180       180
+P19          181       182       183       184       185       186       187       188       189       190       190
+P20          191       192       193       194       195       196       197       198       199       200       200
+Demand       120       140       160       180       200       220       240       260       280       300
+
+===== BALAS-HAMMER METHOD =====
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P1, C10) with cost 10
+Allocate 10
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P2, C10) with cost 20
+Allocate 20
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P3, C10) with cost 30
+Allocate 30
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P4, C10) with cost 40
+Allocate 40
+
+Maximum penalty = 11
+Column with max penalty: C2
+Chosen cell: (P5, C2) with cost 41
+Allocate 50
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P6, C10) with cost 60
+Allocate 60
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P7, C10) with cost 70
+Allocate 70
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Column with max penalty: C10
+Chosen cell: (P8, C10) with cost 80
+Allocate 70
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Chosen cell: (P8, C9) with cost 79
+Allocate 10
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Chosen cell: (P9, C9) with cost 89
+Allocate 90
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Chosen cell: (P10, C9) with cost 99
+Allocate 100
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Column with max penalty: C9
+Chosen cell: (P11, C9) with cost 109
+Allocate 80
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Chosen cell: (P11, C8) with cost 108
+Allocate 30
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Chosen cell: (P12, C8) with cost 118
+Allocate 120
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Column with max penalty: C8
+Chosen cell: (P13, C8) with cost 128
+Allocate 110
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Chosen cell: (P13, C7) with cost 127
+Allocate 20
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Chosen cell: (P14, C7) with cost 137
+Allocate 140
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Column with max penalty: C7
+Chosen cell: (P15, C7) with cost 147
+Allocate 80
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Chosen cell: (P15, C6) with cost 146
+Allocate 70
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Column with max penalty: C6
+Chosen cell: (P16, C6) with cost 156
+Allocate 150
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Chosen cell: (P16, C5) with cost 155
+Allocate 10
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Chosen cell: (P17, C5) with cost 165
+Allocate 170
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Column with max penalty: C5
+Chosen cell: (P18, C5) with cost 175
+Allocate 20
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Chosen cell: (P18, C4) with cost 174
+Allocate 160
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Column with max penalty: C4
+Chosen cell: (P19, C4) with cost 184
+Allocate 20
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Column with max penalty: C3
+Chosen cell: (P19, C3) with cost 183
+Allocate 160
+
+Maximum penalty = 10
+Column with max penalty: C1
+Column with max penalty: C2
+Chosen cell: (P19, C2) with cost 182
+Allocate 10
+
+Maximum penalty = 192
+Column with max penalty: C2
+Chosen cell: (P20, C2) with cost 192
+Allocate 80
+
+Maximum penalty = 191
+Row with max penalty: P20
+Column with max penalty: C1
+Chosen cell: (P20, C1) with cost 191
+Allocate 120
+
+INITIAL PROPOSAL - BALAS-HAMMER
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10    Supply
+P1             .         .         .         .         .         .         .         .         .        10        10
+P2             .         .         .         .         .         .         .         .         .        20        20
+P3             .         .         .         .         .         .         .         .         .        30        30
+P4             .         .         .         .         .         .         .         .         .        40        40
+P5             .        50         .         .         .         .         .         .         .         .        50
+P6             .         .         .         .         .         .         .         .         .        60        60
+P7             .         .         .         .         .         .         .         .         .        70        70
+P8             .         .         .         .         .         .         .         .        10        70        80
+P9             .         .         .         .         .         .         .         .        90         .        90
+P10            .         .         .         .         .         .         .         .       100         .       100
+P11            .         .         .         .         .         .         .        30        80         .       110
+P12            .         .         .         .         .         .         .       120         .         .       120
+P13            .         .         .         .         .         .        20       110         .         .       130
+P14            .         .         .         .         .         .       140         .         .         .       140
+P15            .         .         .         .         .        70        80         .         .         .       150
+P16            .         .         .         .        10       150         .         .         .         .       160
+P17            .         .         .         .       170         .         .         .         .         .       170
+P18            .         .         .       160        20         .         .         .         .         .       180
+P19            .        10       160        20         .         .         .         .         .         .       190
+P20          120        80         .         .         .         .         .         .         .         .       200
+Demand       120       140       160       180       200       220       240       260       280       300
+
+Initial total cost = 279150
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10    Supply
+P1             .         .         .         .         .         .         .         .         .        10        10
+P2             .         .         .         .         .         .         .         .         .        20        20
+P3             .         .         .         .         .         .         .         .         .        30        30
+P4             .         .         .         .         .         .         .         .         .        40        40
+P5             .        50         .         .         .         .         .         .         .         .        50
+P6             .         .         .         .         .         .         .         .         .        60        60
+P7             .         .         .         .         .         .         .         .         .        70        70
+P8             .         .         .         .         .         .         .         .        10        70        80
+P9             .         .         .         .         .         .         .         .        90         .        90
+P10            .         .         .         .         .         .         .         .       100         .       100
+P11            .         .         .         .         .         .         .        30        80         .       110
+P12            .         .         .         .         .         .         .       120         .         .       120
+P13            .         .         .         .         .         .        20       110         .         .       130
+P14            .         .         .         .         .         .       140         .         .         .       140
+P15            .         .         .         .         .        70        80         .         .         .       150
+P16            .         .         .         .        10       150         .         .         .         .       160
+P17            .         .         .         .       170         .         .         .         .         .       170
+P18            .         .         .       160        20         .         .         .         .         .       180
+P19            .        10       160        20         .         .         .         .         .         .       190
+P20          120        80         .         .         .         .         .         .         .         .       200
+Demand       120       140       160       180       200       220       240       260       280       300
+Current total cost = 279150
+
+Number of basic edges = 29
+Expected for a tree = 29
+Proposition is non-degenerate.
+Graph is connected.
+
+Potentials:
+u = [0, 10, 20, 30, 39, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190]
+v = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+POTENTIAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10
+P1             1         2         3         4         5         6         7         8         9        10
+P2            11        12        13        14        15        16        17        18        19        20
+P3            21        22        23        24        25        26        27        28        29        30
+P4            31        32        33        34        35        36        37        38        39        40
+P5            40        41        42        43        44        45        46        47        48        49
+P6            51        52        53        54        55        56        57        58        59        60
+P7            61        62        63        64        65        66        67        68        69        70
+P8            71        72        73        74        75        76        77        78        79        80
+P9            81        82        83        84        85        86        87        88        89        90
+P10           91        92        93        94        95        96        97        98        99       100
+P11          101       102       103       104       105       106       107       108       109       110
+P12          111       112       113       114       115       116       117       118       119       120
+P13          121       122       123       124       125       126       127       128       129       130
+P14          131       132       133       134       135       136       137       138       139       140
+P15          141       142       143       144       145       146       147       148       149       150
+P16          151       152       153       154       155       156       157       158       159       160
+P17          161       162       163       164       165       166       167       168       169       170
+P18          171       172       173       174       175       176       177       178       179       180
+P19          181       182       183       184       185       186       187       188       189       190
+P20          191       192       193       194       195       196       197       198       199       200
+
+MARGINAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10
+P1             0         0         0         0         0         0         0         0         0         0
+P2             0         0         0         0         0         0         0         0         0         0
+P3             0         0         0         0         0         0         0         0         0         0
+P4             0         0         0         0         0         0         0         0         0         0
+P5             1         0         1         1         1         1         1         1         1         1
+P6             0         0         0         0         0         0         0         0         0         0
+P7             0         0         0         0         0         0         0         0         0         0
+P8             0         0         0         0         0         0         0         0         0         0
+P9             0         0         0         0         0         0         0         0         0         0
+P10            0         0         0         0         0         0         0         0         0         0
+P11            0         0         0         0         0         0         0         0         0         0
+P12            0         0         0         0         0         0         0         0         0         0
+P13            0         0         0         0         0         0         0         0         0         0
+P14            0         0         0         0         0         0         0         0         0         0
+P15            0         0         0         0         0         0         0         0         0         0
+P16            0         0         0         0         0         0         0         0         0         0
+P17            0         0         0         0         0         0         0         0         0         0
+P18            0         0         0         0         0         0         0         0         0         0
+P19            0         0         0         0         0         0         0         0         0         0
+P20            0         0         0         0         0         0         0         0         0         0
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2C         3C         4C         5C         6C         7C         8C         9C        10    Supply
+P1             .         .         .         .         .         .         .         .         .        10        10
+P2             .         .         .         .         .         .         .         .         .        20        20
+P3             .         .         .         .         .         .         .         .         .        30        30
+P4             .         .         .         .         .         .         .         .         .        40        40
+P5             .        50         .         .         .         .         .         .         .         .        50
+P6             .         .         .         .         .         .         .         .         .        60        60
+P7             .         .         .         .         .         .         .         .         .        70        70
+P8             .         .         .         .         .         .         .         .        10        70        80
+P9             .         .         .         .         .         .         .         .        90         .        90
+P10            .         .         .         .         .         .         .         .       100         .       100
+P11            .         .         .         .         .         .         .        30        80         .       110
+P12            .         .         .         .         .         .         .       120         .         .       120
+P13            .         .         .         .         .         .        20       110         .         .       130
+P14            .         .         .         .         .         .       140         .         .         .       140
+P15            .         .         .         .         .        70        80         .         .         .       150
+P16            .         .         .         .        10       150         .         .         .         .       160
+P17            .         .         .         .       170         .         .         .         .         .       170
+P18            .         .         .       160        20         .         .         .         .         .       180
+P19            .        10       160        20         .         .         .         .         .         .       190
+P20          120        80         .         .         .         .         .         .         .         .       200
+Demand       120       140       160       180       200       220       240       260       280       300
+Final minimal cost = 279150
