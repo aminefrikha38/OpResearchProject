@@ -1,0 +1,99 @@
+Problem loaded: problem1.txt
+n = 2, m = 2
+
+COST MATRIX
+      C         1C         2    Supply
+P1            30        20       100
+P2            10        50       100
+Demand       100       100
+
+===== NORTH-WEST METHOD =====
+Allocate 100 to (P1, C1)
+Allocate 100 to (P2, C2)
+
+INITIAL PROPOSAL - NORTH-WEST
+      C         1C         2    Supply
+P1           100         .       100
+P2             .       100       100
+Demand       100       100
+
+Initial total cost = 8000
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1           100         .       100
+P2             .       100       100
+Demand       100       100
+Current total cost = 8000
+
+Number of basic edges = 2
+Expected for a tree = 3
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P2, C1)
+Graph is connected.
+
+Potentials:
+u = [0, -20]
+v = [30, 70]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1            30        70
+P2            10        50
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1             0       -50
+P2             0         0
+
+Best improving edge: (P1, C2) with marginal cost -50
+Cycle: (P1,C2) -> (P2,C2) -> (P2,C1) -> (P1,C1)
+Plus cells: ['(P1,C2)', '(P2,C1)']
+Minus cells: ['(P2,C2)', '(P1,C1)']
+theta = 100
+Deleted edge(s): ['(P2,C2)', '(P1,C1)']
+
+========== ITERATION 2 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .       100       100
+P2    100.000001         .       100
+Demand       100       100
+Current total cost = 3000.0000099999997
+
+Number of basic edges = 2
+Expected for a tree = 3
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P1, C1)
+Graph is connected.
+
+Potentials:
+u = [0, -20]
+v = [30, 20]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1            30        20
+P2            10         0
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1             0         0
+P2             0        50
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1         1e-06       100       100
+P2    100.000001         .       100
+Demand       100       100
+Final minimal cost = 3000.00004

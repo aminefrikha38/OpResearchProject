@@ -1,0 +1,109 @@
+Problem loaded: problem8.txt
+n = 5, m = 2
+
+COST MATRIX
+      C         1C         2    Supply
+P1            50        20       100
+P2            10        50       200
+P3            55        40       100
+P4            35        45       200
+P5            12         8       200
+Demand       300       500
+
+===== BALAS-HAMMER METHOD =====
+
+Maximum penalty = 40
+Row with max penalty: P2
+Chosen cell: (P2, C1) with cost 10
+Allocate 200
+
+Maximum penalty = 30
+Row with max penalty: P1
+Chosen cell: (P1, C2) with cost 20
+Allocate 100
+
+Maximum penalty = 32
+Column with max penalty: C2
+Chosen cell: (P5, C2) with cost 8
+Allocate 200
+
+Maximum penalty = 20
+Column with max penalty: C1
+Chosen cell: (P4, C1) with cost 35
+Allocate 100
+
+Maximum penalty = 45
+Row with max penalty: P4
+Chosen cell: (P4, C2) with cost 45
+Allocate 100
+
+Maximum penalty = 40
+Row with max penalty: P3
+Column with max penalty: C2
+Chosen cell: (P3, C2) with cost 40
+Allocate 100
+
+INITIAL PROPOSAL - BALAS-HAMMER
+      C         1C         2    Supply
+P1             .       100       100
+P2           200         .       200
+P3             .       100       100
+P4           100       100       200
+P5             .       200       200
+Demand       300       500
+
+Initial total cost = 17600
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .       100       100
+P2           200         .       200
+P3             .       100       100
+P4           100       100       200
+P5             .       200       200
+Demand       300       500
+Current total cost = 17600
+
+Number of basic edges = 6
+Expected for a tree = 6
+Proposition is non-degenerate.
+Graph is connected.
+
+Potentials:
+u = [0, 0, 20, 25, -12]
+v = [10, 20]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1            10        20
+P2            10        20
+P3            30        40
+P4            35        45
+P5            -2         8
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1            40         0
+P2             0        30
+P3            25         0
+P4             0         0
+P5            14         0
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .       100       100
+P2           200         .       200
+P3             .       100       100
+P4           100       100       200
+P5             .       200       200
+Demand       300       500
+Final minimal cost = 17600

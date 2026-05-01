@@ -1,0 +1,79 @@
+Problem loaded: problem4.txt
+n = 2, m = 2
+
+COST MATRIX
+      C         1C         2    Supply
+P1            30         1       600
+P2             1        30       500
+Demand       100      1000
+
+===== BALAS-HAMMER METHOD =====
+
+Maximum penalty = 29
+Row with max penalty: P1
+Row with max penalty: P2
+Column with max penalty: C1
+Column with max penalty: C2
+Chosen cell: (P2, C1) with cost 1
+Allocate 100
+
+Maximum penalty = 30
+Row with max penalty: P2
+Chosen cell: (P2, C2) with cost 30
+Allocate 400
+
+Maximum penalty = 1
+Row with max penalty: P1
+Column with max penalty: C2
+Chosen cell: (P1, C2) with cost 1
+Allocate 600
+
+INITIAL PROPOSAL - BALAS-HAMMER
+      C         1C         2    Supply
+P1             .       600       600
+P2           100       400       500
+Demand       100      1000
+
+Initial total cost = 12700
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .       600       600
+P2           100       400       500
+Demand       100      1000
+Current total cost = 12700
+
+Number of basic edges = 3
+Expected for a tree = 3
+Proposition is non-degenerate.
+Graph is connected.
+
+Potentials:
+u = [0, 29]
+v = [-28, 1]
+
+POTENTIAL COSTS TABLE
+      C         1C         2
+P1           -28         1
+P2             1        30
+
+MARGINAL COSTS TABLE
+      C         1C         2
+P1            58         0
+P2             0         0
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2    Supply
+P1             .       600       600
+P2           100       400       500
+Demand       100      1000
+Final minimal cost = 12700

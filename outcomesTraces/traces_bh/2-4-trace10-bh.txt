@@ -1,0 +1,143 @@
+Problem loaded: problem10.txt
+n = 3, m = 7
+
+COST MATRIX
+      C         1C         2C         3C         4C         5C         6C         7    Supply
+P1           300        20        15        16        17        18        20       500
+P2             1        50        24        30        22        27        19       500
+P3            50        40        30         3        25        26         3      2500
+Demand       500       500       500       500       500       500       500
+
+===== BALAS-HAMMER METHOD =====
+
+Maximum penalty = 49
+Column with max penalty: C1
+Chosen cell: (P2, C1) with cost 1
+Allocate 500
+
+Maximum penalty = 20
+Column with max penalty: C2
+Chosen cell: (P1, C2) with cost 20
+Allocate 500
+
+Maximum penalty = 30
+Column with max penalty: C3
+Chosen cell: (P3, C3) with cost 30
+Allocate 500
+
+Maximum penalty = 26
+Column with max penalty: C6
+Chosen cell: (P3, C6) with cost 26
+Allocate 500
+
+Maximum penalty = 25
+Column with max penalty: C5
+Chosen cell: (P3, C5) with cost 25
+Allocate 500
+
+Maximum penalty = 3
+Column with max penalty: C4
+Column with max penalty: C7
+Chosen cell: (P3, C7) with cost 3
+Allocate 500
+
+Maximum penalty = 3
+Row with max penalty: P3
+Column with max penalty: C4
+Chosen cell: (P3, C4) with cost 3
+Allocate 500
+
+INITIAL PROPOSAL - BALAS-HAMMER
+      C         1C         2C         3C         4C         5C         6C         7    Supply
+P1             .       500         .         .         .         .         .       500
+P2           500         .         .         .         .         .         .       500
+P3             .         .       500       500       500       500       500      2500
+Demand       500       500       500       500       500       500       500
+
+Initial total cost = 54000
+
+===== STEPPING-STONE METHOD WITH POTENTIALS =====
+
+========== ITERATION 1 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2C         3C         4C         5C         6C         7    Supply
+P1             .       500         .         .         .         .         .       500
+P2           500         .         .         .         .         .         .       500
+P3             .         .       500       500       500       500       500      2500
+Demand       500       500       500       500       500       500       500
+Current total cost = 54000
+
+Number of basic edges = 7
+Expected for a tree = 9
+Proposition is degenerate or not a tree.
+Added epsilon edge to make tree: (P1, C3)
+Added epsilon edge to make tree: (P2, C7)
+Graph is connected.
+
+Potentials:
+u = [0, 31, 15]
+v = [-30, 20, 15, -12, 10, 11, -12]
+
+POTENTIAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7
+P1           -30        20        15       -12        10        11       -12
+P2             1        51        46        19        41        42        19
+P3           -15        35        30         3        25        26         3
+
+MARGINAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7
+P1           330         0         0        28         7         7        32
+P2             0        -1       -22        11       -19       -15         0
+P3            65         5         0         0         0         0         0
+
+Best improving edge: (P2, C3) with marginal cost -22
+Cycle: (P2,C3) -> (P3,C3) -> (P3,C7) -> (P2,C7)
+Plus cells: ['(P2,C3)', '(P3,C7)']
+Minus cells: ['(P3,C3)', '(P2,C7)']
+theta = 1e-06
+Deleted edge(s): ['(P2,C7)']
+
+========== ITERATION 2 ==========
+
+CURRENT TRANSPORT PROPOSAL
+      C         1C         2C         3C         4C         5C         6C         7    Supply
+P1             .       500     1e-06         .         .         .         .       500
+P2           500         .     1e-06         .         .         .         .       500
+P3             .         .499.999999       500       500       500500.000001      2500
+Demand       500       500       500       500       500       500       500
+Current total cost = 54000.000012000004
+
+Number of basic edges = 9
+Expected for a tree = 9
+Proposition is non-degenerate.
+Graph is connected.
+
+Potentials:
+u = [0, 9, 15]
+v = [-8, 20, 15, -12, 10, 11, -12]
+
+POTENTIAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7
+P1            -8        20        15       -12        10        11       -12
+P2             1        29        24        -3        19        20        -3
+P3             7        35        30         3        25        26         3
+
+MARGINAL COSTS TABLE
+      C         1C         2C         3C         4C         5C         6C         7
+P1           308         0         0        28         7         7        32
+P2             0        21         0        33         3         7        22
+P3            43         5         0         0         0         0         0
+
+No negative marginal cost.
+The current solution is optimal.
+
+========== FINAL MINIMAL PROPOSAL ==========
+
+FINAL TRANSPORT PROPOSAL
+      C         1C         2C         3C         4C         5C         6C         7    Supply
+P1             .       500     1e-06         .         .         .         .       500
+P2           500         .     1e-06         .         .         .         .       500
+P3             .         .499.999999       500       500       500500.000001      2500
+Demand       500       500       500       500       500       500       500
+Final minimal cost = 54000.000012000004
