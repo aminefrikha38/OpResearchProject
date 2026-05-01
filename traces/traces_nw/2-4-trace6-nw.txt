@@ -1,3 +1,9 @@
+=====================================
+TRANSPORTATION PROBLEM PROJECT
+=====================================
+Choose problem number (1 to 12): 6
+Choose initial method (nw or bh): nw
+
 Problem loaded: problem6.txt
 n = 3, m = 4
 
